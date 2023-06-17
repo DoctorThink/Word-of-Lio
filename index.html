@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word of Lio - Productivity Tools and Cool Journalist</title>
+  <style>
+    /* Global styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f7fd;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #224f99;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    /* Navigation styles */
+    nav {
+      background-color: #3968b3;
+      color: #ffffff;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: color 0.3s ease-in-out;
+    }
+
+    nav ul li a:hover {
+      color: #ffd700;
+    }
+
+    /* Section styles */
+    section {
+      padding: 50px;
+      background-color: #ffffff;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      font-size: 24px;
+      margin: 0 0 20px 0;
+      text-align: center;
+    }
+
+    /* Tool section styles */
+    #tools {
+      background-color: #f0f7ff;
+      overflow-x: auto;
+    }
+
+    .tool-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      gap: 20px;
+      padding-bottom: 20px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+
+    .tool {
+      background-color: #f2faff;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      flex: 0 0 auto;
+      width: 300px;
+      min-width: 300px;
+      max-width: 300px;
+    }
+
+    .tool:hover {
+      transform: scale(1.05);
+    }
+
+    /* Journalist section styles */
+    #journalist {
+      background-color: #f8fbff;
+      overflow-x: auto;
+    }
+
+    .articles-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      gap: 20px;
+      padding-bottom: 20px;
+      overflow-x: auto; /* Add this line */
+      scroll-behavior: smooth;
+    }
+
+    .article {
+      background-color: #fafcff;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      flex: 0 0 auto;
+      width: 300px;
+      min-width: 300px;
+      max-width: unset; /* Modify this line */
+    }
+
+    .article:hover {
+      transform: scale(1.05);
+    }
+
+    .article-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out;
+    }
+
+    .article-expanded {
+      max-height: 500px;
+      transition: max-height 0.5s ease-in-out;
+    }
+
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .article-content .image-credit {
+      font-size: 12px;
+      color: #888888;
+    } 
+    
+    .article .read-article {
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: #224f99;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 4px;
+    } 
+     
+     .article .read-article.unread {
+      background-color: #ff0000;
+    } 
+    
+    /* Footer styles */
+    footer {
+      background-color: #224f99;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 14px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Word of Lio</h1>
+    <p>The Little Inventive One</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#journalist">Articles</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <div>
+      <p>Word of Lio is a platform created by Lio, the Little Inventive One, to empower individuals and businesses through technology. Our mission is to provide innovative and useful productivity tools that simplify complex tasks, as well as share captivating articles to inspire creativity and enhance productivity.</p>
+      <p>We believe that everyone has the potential to achieve great things, and with the right tools and knowledge, they can unleash their true potential. Join us on this exciting journey of exploration, learning, and growth!</p>
+    </div>
+  </section>
+
+  <section id="tools">
+    <h2>Tools</h2>
+    <p>Discover a range of tools and resources to enhance your productivity and efficiency.</p>
+  
+    <div class="tool-container">
+      <div class="tool">
+        <h3>Text to Table Generator</h3>
+        <p>Convert plain text into a well-structured table.</p>
+        <a href="https://doctorthink.github.io/Text-To-Table/" target="_blank">Try it Now</a>
+      </div>
+      <div class="tool">
+        <h3>Text to Chart Generator</h3>
+        <p>Create stunning charts and visualizations from text data.</p>
+        <a href="https://doctorthink.github.io/pacman/" target="_blank">Try it Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="journalist">
+    <h2>Articles</h2>
+    <p>Explore captivating articles that inspire creativity and boost productivity.</p>
+    <div class="articles-container">
+      <div class="article">
+        <h3>Unleash Your Creativity</h3>
+        <p>Discover inspiring stories and articles that ignite your imagination.</p>
+        <a class="read-article" href="#">Read Article</a>
+        <div class="article-content">
+          <div class="blog-post">
+            <h3>Unleash Your Creativity</h3>
+            <p>Discover inspiring stories and articles that ignite your imagination.</p>
+            <p>Unleash your creativity by getting inspired, taking breaks, not being afraid to fail, and having fun! Experiment with different art mediums, collaborate with others, don't be afraid to make mistakes, and set aside time for creativity. Creativity is a powerful force that can help you solve problems, come up with new ideas, and express yourself in unique ways. So get out there and start creating!</p>
+            <img src="https://blog.vantagecircle.com/content/images/size/w1000/2020/02/creativity-at-work.png" alt="Unleash Your Creativity Image">
+            <p>Image credit: <a href="https://blog.vantagecircle.com/" target="_blank">Vantage Circle</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="article">
+        <h3>The Power of Productivity</h3>
+        <p>Learn practical tips and tricks to boost your efficiency and achieve more.</p>
+        <a class="read-article" href="#">Read Article</a>
+        <div class="article-content">
+          <div class="blog-post">
+            <h3>The Power of Productivity</h3>
+            <p>Learn practical tips and tricks to boost your efficiency and achieve more.</p>
+            <p>Productivity is the key to achieving more in life. By being more productive, you can free up time to do the things you love and achieve your goals faster. There are many different ways to boost your productivity, such as setting goals and priorities, planning your time wisely, breaking down large tasks into smaller ones, taking breaks, delegating tasks, and saying no. By following these tips, you can boost your productivity and achieve more in life.</p>
+            <img src="https://cdn.elearningindustry.com/wp-content/uploads/2022/09/10-Ways-To-Improve-Employee-Productivity-In-The-Workplace.jpg" alt="The Power of Productivity Image">
+            <p>Image credit: <a href="https://www.elearningindustry.com/" target="_blank">eLearning Industry</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="article">
+        <h3>Innovation in Action</h3>
+        <p>Explore groundbreaking technologies and their impact on our daily lives.</p>
+        <a class="read-article" href="#">Read Article</a>
+        <div class="article-content">
+          <div class="blog-post">
+            <h3>Innovation in Action</h3>
+            <p>Explore groundbreaking technologies and their impact on our daily lives.</p>
+            <p>Innovation is constantly changing our lives. New technologies like AI, VR, AR, blockchain, and 3D printing are being used in healthcare, transportation, and customer service. As these technologies develop, we can expect even more innovation in the years to come.</p>
+            <p>Innovation has the potential to make our lives easier, more efficient, and more enjoyable. For example, AI could be used to diagnose diseases, VR could be used to travel to any destination in the world, and AR could be used to learn new skills. The possibilities are endless.</p>
+            </p>
+            <img src="https://blog.vantagecircle.com/content/images/size/w1000/2020/02/creativity-at-work.png" alt="Unleash Your Creativity Image">
+            <p class="image-credit">Image credit: <a href="https://blog.vantagecircle.com/" target="_blank">Vantage Circle</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Word of Lio. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth scroll animation for navigation links
+    const navLinks = document.querySelectorAll('nav a');
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        window.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Expand/collapse article content
+    const readArticleLinks = document.querySelectorAll('.read-article');
+
+    readArticleLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const articleContent = link.nextElementSibling;
+
+        if (articleContent.classList.contains('article-expanded')) {
+          articleContent.classList.remove('article-expanded');
+          link.textContent = 'Read Article';
+          link.classList.remove('unread');
+        } else {
+          articleContent.classList.add('article-expanded');
+          link.textContent = 'Unread Article';
+          link.classList.add('unread');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
